@@ -96,7 +96,8 @@ mutation {
 
 
 # Public Collor palletes api query
-```query{
+```
+query{
   publicColerPalletes{
     edges{
       node{
@@ -116,5 +117,130 @@ mutation {
     }
   }
 }
+
+````
+## Color palate create 
+
+> need to provide users token in Header file , otherwise it will return Permission denied
+````
+mutation{
+  colerPaletteCreate(
+      input:{
+        name: "TV Error Color Palette",
+        dominantColor1: Strint(),
+        dominantColor2: Strint(),
+        accentColor1:  Strint(),
+        accentColor2: Strint(),
+        accentColor3: Strint(),
+        accentColor4:Strint()
+      }
+      ) {
+    	colorPalette{
+        id
+        name
+        
+      }
+  }
+} 		
 ````
 
+
+## Color palate Update 
+> need to provide users token in Header file , One user can update his own color paletes. otherwise it will return Permission denied
+````
+mutation{
+  colerPaletteCreate(
+      input:{
+        id: ID(),
+        name: Strint(),
+        dominantColor1: Strint(),
+        dominantColor2: Strint(),
+        accentColor1:  Strint(),
+        accentColor2: Strint(),
+        accentColor3: Strint(),
+        accentColor4: Strint()
+      }
+      ) {
+    	colorPalette{
+        id
+        name
+        
+      }
+  }
+}
+
+
+## Color palate delete 
+> need to provide users token in Header file , One user can delete his own color paletes. otherwise it will return Permission denied.
+
+````
+mutation{
+  colerPaletteCreate(
+      input:{
+        id: ID(),
+        name: Strint(),
+        dominantColor1: Strint(),
+        dominantColor2: Strint(),
+        accentColor1:  Strint(),
+        accentColor2: Strint(),
+        accentColor3: Strint(),
+        accentColor4: Strint()
+      }
+      ) {
+    	colorPalette{
+        id
+        name
+        
+      }
+  }
+}
+
+
+## Add to Favorite
+> need to provide users token in Header file. otherwise it will return Permission denied.
+
+````
+mutation{
+  addToFavorite(
+      colorPalateId:ID()
+      ){
+    	message
+        
+      }
+  }
+	
+````
+
+## Remove From Favorite
+> need to provide users token in Header file. otherwise it will return Permission denied.
+
+````
+mutation{
+  removeFromFavorite(
+      colorPalateId:ID()
+      ){
+    	message
+      }
+  }
+	
+````
+
+## color pallets revision query
+```
+query{
+  colorPaletteRevisions(
+    collerPalleteId: ID()
+    )
+  {
+    edges{
+      node{
+        id
+        timestamp
+        
+       changes
+        
+      }
+    }
+  }
+}
+```
