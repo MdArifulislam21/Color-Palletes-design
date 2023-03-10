@@ -288,4 +288,10 @@ class CollerPalettesQuery:
         user = info.context.user
         return ColorPalette.objects.filter(user=user).select_related('created_by')
     
+    color_palette_revisions = DjangoFilterConnectionField(ColorPaletteeReivisionNode, coller_pallete_id=graphene.ID())
+    @login_required
+    def resolve_color_palette_revisions(self, info,coller_pallete_id, **kwargs):
+        coller_pallete_id = from_global_id(coller_pallete_id)[1]
+        return ColorPalette.objects.get(id=coller_pallete_id).revisions.all()
+    
     

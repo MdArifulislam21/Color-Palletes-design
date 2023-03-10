@@ -54,19 +54,42 @@
   }
 }
 ````
+> response 
+````{
+  "data": {
+    "userRegister": {
+      "user": {
+        "id": "VXNlclR5cGU6Ng==",
+        "username": "arif10"
+      }
+    }
+  }
+}````
 
 ### login api
-
+> It will return users token
 ```
 mutation {
   loginToken(
-    email: "arif2@test.com",
+    email: "ariful@test.com",
     password: "Test1234",
 
   ) {
     success,
     errors,
     token
+  }
+}
+````
+> response 
+```
+{
+  "data": {
+    "loginToken": {
+      "success": true,
+      "errors": null,
+      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFyaWYyIiwiZXhwIjoxNjc4NDUxOTU0LCJvcmlnSWF0IjoxNjc4NDUxNjU0fQ.K4RlfRq4lBg6iV8gndpu5l31meg8Pd_KNJV3meIGmCg"
+    }
   }
 }
 ````

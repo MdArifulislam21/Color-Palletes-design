@@ -64,6 +64,14 @@ class Mutation(graphene.ObjectType):
     login_token = mutations.ObtainJSONWebToken.Field()
     user_register = UserRegister.Field()
     
+    coler_palette_create = ColorPaletteCreate.Field()
+    coler_palette_update = ColorPaletteUpdate.Field()
+    delete_coler_palette_create = DeleteColorPalette.Field()
+    
+    add_to_favorite = AddToFavorite.Field()
+    remove_from_favorite = RemoveFromFavorite.Field()
+    
+    
 
 
 schema = graphene.Schema(query=Query, mutation=Mutation)
