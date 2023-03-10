@@ -93,3 +93,28 @@ mutation {
   }
 }
 ````
+
+
+# Public Collor palletes api query
+```query{
+  publicColerPalletes{
+    edges{
+      node{
+        name
+        dominantColor1
+        dominantColor2
+        accentColor1
+        accentColor2
+        accentColor3
+        accentColor4
+        
+        createdBy{
+          username
+          
+        }
+      }
+    }
+  }
+}
+````
+
