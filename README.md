@@ -9,11 +9,26 @@
 
 #### Step No 2.
 
-> Go to the coller_palettes_api folder inside **codesign_assignment** directory and open the terminal in this directory and also
-> install virtualenv ()
+> Go to the coller_palettes_api folder inside **codesign_assignment** directory and open the terminal in this directory 
 
-> activate virtualend
+> install virtualenv  
+> for linux 
+ ````python3 -m pip install --user virtualenv```
+ ````python3 -m venv env```
 
-> after that run `pip install -r requirements.txt'
+> for windows 
+ ````py -m pip install --user virtualenv```
+ ````py -m venv env```
+------
+> activate virtualend  
+> for linux ````source env/bin/activate````
+>for windows ````.\env\Scripts\activate````
 
-> And run the command: `python manage.py runserver'
+
+> after that run ````pip install -r requirements.txt````
+
+> And run the command: ````python manage.py runserver````
+
+
+
+
