@@ -20,14 +20,14 @@ class ColorPaletteNode(DjangoObjectType):
 class ColorPaletteeReivisionNode(DjangoObjectType):
     class Meta:
         model = ColorPaletteRevision
-        filter_fields = ['changes', "modified_by__username", 'color_palette__name']
+        filter_fields = ['changes', 'color_palette__name']
         interfaces = (relay.Node,)
 
 
 class FavoriteNode(DjangoObjectType):
     class Meta:
         model = Favorite
-        filter_fields = ['user_username','']
+        filter_fields = []
         interfaces = (relay.Node,)
 
 

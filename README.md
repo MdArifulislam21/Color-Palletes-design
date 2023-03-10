@@ -31,4 +31,42 @@
 
 
 
+## Api Documentation 
 
+## Api Url: http://127.0.0.1:8000/graphql
+
+### register api
+```mutation {
+  userRegister(
+    input:{
+      email: "ariful@test.com",
+      username: "ariful",
+      password1: "Test1234",
+      password2: "Test1234",
+    }
+   
+  ) {
+    user{
+      id
+      username
+      username
+    }
+  }
+}
+````
+
+### login api
+
+```
+mutation {
+  loginToken(
+    email: "arif2@test.com",
+    password: "Test1234",
+
+  ) {
+    success,
+    errors,
+    token
+  }
+}
+````
