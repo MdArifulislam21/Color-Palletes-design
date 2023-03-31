@@ -1,4 +1,4 @@
-# Design Coller Pallates Api
+# Design Color Palletes Api
 
 ## Used tools Django, graphql
 
