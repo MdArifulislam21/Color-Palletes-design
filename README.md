@@ -1,4 +1,6 @@
-# Design Coller Pallates
+# Design Coller Pallates Api
+
+## Used tools Django, graphql
 
 ------
 ## To run this project you have to follow some steps.
