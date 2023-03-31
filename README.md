@@ -1,4 +1,4 @@
-# codesign_assignment
+# Design Coller Pallates
 
 ------
 ## To run this project you have to follow some steps.
